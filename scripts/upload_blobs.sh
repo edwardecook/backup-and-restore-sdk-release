@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/usr/bin/env bash
 
 # Copyright (C) 2017-Present Pivotal Software, Inc. All rights reserved.
 #
@@ -16,8 +16,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-cd $(dirname $0)/..
+set -e
+set -u
 
-lpass show private.yml --notes > config/private.yml
+RELEASE_PATH="$(dirname "$0")/.."
 
-bosh-cli upload-blobs
+cd "$RELEASE_PATH"
+./scripts/get_private_config.sh
+bosh upload-blobs
