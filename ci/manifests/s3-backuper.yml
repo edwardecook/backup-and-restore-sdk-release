@@ -136,9 +136,12 @@ instance_groups:
   - name: minio-server
     release: minio
     properties:
+      ca_cert: "((minio_server_cert))"
+      server_cert: "((minio_server_cert))"
+      server_key: "((minio_server_key))"
       credential:
-        accesskey: ((minio-access-key))
-        secretkey: ((minio-secret-key))
+        accesskey: "((minio-access-key))"
+        secretkey: "((minio-secret-key))"
       port: 9000
 
 
