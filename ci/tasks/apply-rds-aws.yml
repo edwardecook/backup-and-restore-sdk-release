@@ -23,4 +23,4 @@ params:
   POSTGRES_9_6_PASSWORD:
 
 run:
-  path: backup-and-restore-sdk-release/ci/tasks/apply-rds-aws.sh
+  path: backup-and-restore-sdk-release/ci/scripts/apply-rds-aws.sh

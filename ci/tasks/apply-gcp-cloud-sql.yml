@@ -18,4 +18,4 @@ params:
   POSTGRES_9_6_PASSWORD:
 
 run:
-  path: backup-and-restore-sdk-release/ci/tasks/apply-gcp-cloud-sql.sh
+  path: backup-and-restore-sdk-release/ci/scripts/apply-gcp-cloud-sql.sh
